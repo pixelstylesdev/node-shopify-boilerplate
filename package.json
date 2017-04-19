@@ -1,0 +1,31 @@
+{
+  "name": "node-shopify-boilerplate",
+  "version": "1.0.0",
+  "description": "A template for creating node.js Shopify apps.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixelstylesdev/node-shopify-boilerplate.git"
+  },
+  "keywords": [
+    "shopify",
+    "node"
+  ],
+  "author": "Zachary Lumpkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixelstylesdev/node-shopify-boilerplate/issues"
+  },
+  "homepage": "https://github.com/pixelstylesdev/node-shopify-boilerplate#readme",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.1",
+    "express": "^4.15.0",
+    "jade": "^1.11.0",
+    "oauth": "^0.9.15"
+  }
+}

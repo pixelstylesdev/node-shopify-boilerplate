@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    script(src='https://cdn.shopify.com/s/assets/external/app.js')
+    script.
+        ShopifyApp.init({
+          apiKey: '#{apiKey}',
+          shopOrigin: '#{shopUrl}'
+        });
+
+  body
+    block content
