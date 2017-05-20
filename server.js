@@ -7,20 +7,21 @@ const routes = require('./routes');
 
 const app = express();
 
-//support json and url encoded requests
+// Support json and url encoded requests
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//setup encrypted session cookies
+// Setup encrypted session cookies
 app.use(cookieParser());
 app.use(cookieSession({
     secret: "--express-session-encryption-key--"
 }));
 
-//statically serve from the 'public' folder
-app.use(express.static(path.join(__dirname, 'public')));
+// Statically serve from the 'app/build/static' folder.
+// Contains client-side assets from the js build pipeline.
+app.use('/static', express.static(path.join(__dirname, 'app/build/static')));
 
-//use jade templating engine for view rendering
+// Use jade templating engine for view rendering
 app.set('view engine', 'jade');
 
 app.use(routes());
